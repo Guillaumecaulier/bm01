@@ -1,5 +1,6 @@
 export class Motorcycle {
     id: number;
+    link: string;
     model: string;
     is_gsa: boolean;
     color: string;
@@ -10,7 +11,7 @@ export class Motorcycle {
     touring_pack: boolean;
     comfort_pack: boolean;    
     has_side_cases: boolean;
-    has_top_cases: boolean;
+    has_top_case: boolean;
     bmw_luggages: boolean;
     aluminium_luggages: boolean;
 }

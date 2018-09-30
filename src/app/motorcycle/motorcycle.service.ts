@@ -10,10 +10,10 @@ export class MotorcycleService {
 
   constructor() { }
 
-  getMotorcyles(): Observable<Motorcycle[]> {
+  getMotorcycles(): Observable<Motorcycle[]> {
     return of(MOTORCYCLES);
   }
-  getMotorcyle(id: number): Observable<Motorcycle> {
+  getMotorcycle(id: number): Observable<Motorcycle> {
     return of(MOTORCYCLES.find(motorcycle => motorcycle.id === id));
   }
 

@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+h1 {
+    font-size: 35px;
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 16px;
+    
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.small-txt {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+  

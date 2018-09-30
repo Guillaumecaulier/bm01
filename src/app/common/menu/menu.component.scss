@@ -1,0 +1,48 @@
+$light-blue: #0087B0;
+$dark-blue: #112568;
+$red:#BA011A;
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(33,33,33);    
+    .logo-container {
+        display: flex;
+        .logo-colored {
+            height: 24px;
+            width: 30px;
+            background: $dark-blue;
+            display: inline-block;
+            content:'';
+            position: relative;
+            transform: skew(10deg);
+            margin: 0 10px;
+            &:before, &:after {
+                position: absolute;
+                top: 0;
+                height: 24px;
+                width: 10px;
+                display: inline-block;
+                content:'';
+            }
+            &:before {
+                background: $light-blue;
+                left: 0;
+                
+            }
+            &:after {
+                background: $red;
+                right: 0;
+                
+            }
+        }
+        .logo {
+            color: rgb(250,250,250);
+            font-weight: 400;
+            text-decoration: none;            
+            padding: 3px;
+            display: inline-block;
+        }
+    }
+}

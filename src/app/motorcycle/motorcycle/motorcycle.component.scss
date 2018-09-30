@@ -1,0 +1,52 @@
+table {
+    width: 100%;
+}
+
+.color {
+    height: 14px;
+    width: 14px;
+    display: inline-block;
+    content:'';
+    background: #FFF;
+    border-radius: 2px;    
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #918474;
+    &:after {
+        position: absolute;
+        content:'';
+        top: -1px;
+        left: -1px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 14px 14px;
+        border-color: transparent transparent #007bff transparent;
+
+    }
+    &.green {
+        background: #6f9154;
+        &:after {
+            border-color: transparent transparent #ff6100 transparent;
+        }
+    }
+}
+
+.mat-chip-list {
+    margin-left: 10px;
+}
+.img-container {
+    display: inline-block;
+}
+.luggages-options {
+    display: inline-block;   
+    margin: 0; 
+    padding: 0 20px;
+    list-style: none;
+    font-size: 10px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
