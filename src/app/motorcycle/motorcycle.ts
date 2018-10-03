@@ -14,4 +14,5 @@ export class Motorcycle {
     has_top_case: boolean;
     bmw_luggages: boolean;
     aluminium_luggages: boolean;
+    estimated_price: number;
 }

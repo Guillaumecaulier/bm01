@@ -6,8 +6,7 @@ table {
     height: 14px;
     width: 14px;
     display: inline-block;
-    content:'';
-    background: #FFF;
+    content:'';    
     border-radius: 2px;    
     position: relative;
     overflow: hidden;
@@ -21,13 +20,30 @@ table {
         height: 0;
         border-style: solid;
         border-width: 0 0 14px 14px;
-        border-color: transparent transparent #007bff transparent;
+        
 
     }
     &.green {
-        background: #6f9154;
+        background: #4f643e;
         &:after {
-            border-color: transparent transparent #ff6100 transparent;
+            border-color: transparent transparent #b94802 transparent;
+        }
+    }
+    &.black {
+        background: #000;
+        &:after {
+            border-color: transparent transparent #616161 transparent;
+        }
+    }
+    &.white {
+        background: #FFF;
+        &:after {
+            border-color: transparent transparent #616161 transparent;
+        }
+        &.true {
+            &:after {
+                border-color: transparent transparent #007bff transparent;
+            }
         }
     }
 }

@@ -1,6 +1,6 @@
 <div class="row">
   <div class="small-12 columns">
-    <h2>Occasions</h2>
+    <h2>Occasions</h2>    
     <table mat-table [dataSource]="motorcycles" class="mat-elevation-z0">   
       
       <ng-container matColumnDef="model">
@@ -19,6 +19,12 @@
         <th mat-header-cell *matHeaderCellDef>Kms</th>
         <td mat-cell *matCellDef="let motorcycle">
           <span>{{ motorcycle.kilometer }} Kms</span>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="estimated">
+        <th mat-header-cell *matHeaderCellDef>Prix neuf (estimé)</th>
+        <td mat-cell *matCellDef="let motorcycle">
+          <span>{{ motorcycle.estimated_price }} €</span>
         </td>
       </ng-container>
       <ng-container matColumnDef="packs">
@@ -72,7 +78,13 @@
       <ng-container matColumnDef="color">
         <th mat-header-cell *matHeaderCellDef>Couleur</th>
         <td mat-cell *matCellDef="let motorcycle">
-            <span class="color {{motorcycle.color}}"></span>
+            <span class="color {{motorcycle.color}} {{motorcycle.is_gsa}}"></span>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="rating">
+        <th mat-header-cell *matHeaderCellDef>Côte</th>
+        <td mat-cell *matCellDef="let motorcycle">
+          <span>{{ 100 - ((motorcycle.estimated_price - motorcycle.price)*100/motorcycle.estimated_price) | number:'2.0-0'}}%</span>
         </td>
       </ng-container>
       <ng-container matColumnDef="link">
