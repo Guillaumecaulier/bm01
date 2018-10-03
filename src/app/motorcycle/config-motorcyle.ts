@@ -108,5 +108,23 @@ export const MOTORCYCLES: Motorcycle[] = [
         bmw_luggages: true,
         aluminium_luggages: true,
         estimated_price: 0   
-    }
+    },
+    {
+        id: 6,
+        link:"https://www.leboncoin.fr/motos/1491644260.htm/",
+        model: 'R 1200 GS lc',
+        is_gsa: false,
+        color: "black",
+        year: 2013,
+        kilometer: 23800,
+        price: 12800,
+        dynamic_pack: true,
+        touring_pack: true,
+        comfort_pack: true,    
+        has_side_cases: true,
+        has_top_case: true,
+        bmw_luggages: true,
+        aluminium_luggages: true,
+        estimated_price: 0   
+    }    
 ];
