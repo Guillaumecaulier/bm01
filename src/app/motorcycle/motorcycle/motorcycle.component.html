@@ -48,10 +48,14 @@
         <th mat-header-cell *matHeaderCellDef>Bagagerie</th>
         <td mat-cell *matCellDef="let motorcycle">
           <div class="flex">
-            <div *ngIf="motorcycle.has_side_cases && motorcycle.has_top_case; else notFullLuggages" class="img-container">
-                <img src="./assets/img/full-luggages.svg" alt="">
+            <div *ngIf="!motorcycle.has_side_cases && !motorcycle.has_top_case; else luggages" class="img-container">
+                <img src="./assets/img/no-luggages.svg" alt="">
             </div>
-            
+            <ng-template #luggages>      
+              <div *ngIf="motorcycle.has_side_cases && motorcycle.has_top_case; else notFullLuggages" class="img-container">
+                  <img src="./assets/img/full-luggages.svg" alt="">
+              </div>
+            </ng-template>
             <ng-template #notFullLuggages>            
                 <div *ngIf="motorcycle.has_side_cases && motorcycle.has_top_case == false; else topCase" class="img-container">
                     <img src="./assets/img/sidecases.svg" alt="">
@@ -75,18 +79,18 @@
         <td mat-cell *matCellDef="let motorcycle"> {{motorcycle.price}} €</td>
       </ng-container>
 
+      <ng-container matColumnDef="score">
+        <th mat-header-cell *matHeaderCellDef>Note</th>
+        <td mat-cell *matCellDef="let motorcycle"><span class="bold">{{motorcycle.globalScore  | number:'2.0-0'}}</span><span class="small-txt">/20</span></td>
+      </ng-container>
+
       <ng-container matColumnDef="color">
         <th mat-header-cell *matHeaderCellDef>Couleur</th>
         <td mat-cell *matCellDef="let motorcycle">
             <span class="color {{motorcycle.color}} {{motorcycle.is_gsa}}"></span>
         </td>
       </ng-container>
-      <ng-container matColumnDef="rating">
-        <th mat-header-cell *matHeaderCellDef>Côte</th>
-        <td mat-cell *matCellDef="let motorcycle">
-          <span>{{ 100 - ((motorcycle.estimated_price - motorcycle.price)*100/motorcycle.estimated_price) | number:'2.0-0'}}%</span>
-        </td>
-      </ng-container>
+      
       <ng-container matColumnDef="link">
         <th mat-header-cell *matHeaderCellDef>Lien</th>
         <td mat-cell *matCellDef="let motorcycle">

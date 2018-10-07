@@ -19,9 +19,24 @@ export class MotorcycleComponent implements OnInit {
     this.motorcycleService.getMotorcycles()
     .subscribe(motorcycles => this.motorcycles = motorcycles);     
     this.estimatedPrice()   
+    this.ratioMotorcycle();
   }
-  displayedColumns: string[] = ['model','year', 'kilometer', 'estimated', 'color','packs','luggages', 'price', 'rating', 'link'];  
+  displayedColumns: string[] = ['model','year', 'kilometer', 'estimated', 'color','packs','luggages', 'price', 'score', 'link'];  
 
+  ratioMotorcycle(): any {
+    for(var i= 0; i < this.motorcycles.length; i++) {
+      const motorcycle = this.motorcycles[i];
+      const yearScore = (motorcycle.year - 2000)/18 * 20;
+      const kilometerScore = 20 - (motorcycle.kilometer/100000 * 20);
+      const priceScore =20-( motorcycle.price/motorcycle.estimated_price * 20);
+      console.log(priceScore)
+      const luggagesScore = (+motorcycle.has_side_cases + +motorcycle.has_top_case) * 20/2;
+      const aluminiumLuggages = +motorcycle.aluminium_luggages * 20;
+      const bmwLuggages = +motorcycle.bmw_luggages * 20;      
+      const globalScore = ( yearScore + (kilometerScore * 3 ) + priceScore + luggagesScore + ( bmwLuggages * 0.5 ) +( aluminiumLuggages * 0.5 ) ) / 7;
+      motorcycle.globalScore = globalScore;
+    }
+  }
   estimatedPrice():any {
     for(var i= 0; i < this.motorcycles.length; i++) {
       const motorcycle = this.motorcycles[i];

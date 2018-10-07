@@ -11,14 +11,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { MotorcycleComponent } from './motorcycle/motorcycle/motorcycle.component';
 import { MenuComponent } from './common/menu/menu.component';
-import { MotorcycleDetailComponent } from './motorcycle/motorcycle-detail/motorcycle-detail.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     MotorcycleComponent,
-    MenuComponent,
-    MotorcycleDetailComponent
+    MenuComponent    
   ],
   imports: [
     BrowserModule,

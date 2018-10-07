@@ -15,4 +15,5 @@ export class Motorcycle {
     bmw_luggages: boolean;
     aluminium_luggages: boolean;
     estimated_price: number;
+    globalScore: number;
 }

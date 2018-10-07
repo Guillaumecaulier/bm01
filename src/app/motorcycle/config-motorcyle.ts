@@ -7,17 +7,18 @@ export const MOTORCYCLES: Motorcycle[] = [
         model: 'R 1200 GS lc',
         is_gsa: false,
         color: "black",
-        year: 2013,
-        kilometer: 24000,
-        price: 12400,
+        year: 2018,
+        kilometer: 1,
+        price: 8400,
         dynamic_pack: true,
         touring_pack: true,
         comfort_pack: true,    
         has_side_cases: true,
-        has_top_case: false,
+        has_top_case: true,
         bmw_luggages: true,
-        aluminium_luggages: false,
-        estimated_price: 0
+        aluminium_luggages: true,
+        estimated_price: 0,
+        globalScore: 0
     },
     {
         id: 2,
@@ -35,7 +36,8 @@ export const MOTORCYCLES: Motorcycle[] = [
         has_top_case: true,
         bmw_luggages: true,
         aluminium_luggages: false,
-        estimated_price: 0   
+        estimated_price: 0,
+        globalScore: 0   
     },
     {
         id: 3,
@@ -53,7 +55,8 @@ export const MOTORCYCLES: Motorcycle[] = [
         has_top_case: true,
         bmw_luggages: true,
         aluminium_luggages: false,
-        estimated_price: 0   
+        estimated_price: 0,
+        globalScore: 0   
     },
     {
         id: 4,
@@ -71,7 +74,8 @@ export const MOTORCYCLES: Motorcycle[] = [
         has_top_case: true,
         bmw_luggages: true,
         aluminium_luggages: true,
-        estimated_price: 0   
+        estimated_price: 0,
+        globalScore: 0   
     },
     {
         id: 5,
@@ -89,7 +93,8 @@ export const MOTORCYCLES: Motorcycle[] = [
         has_top_case: true,
         bmw_luggages: false,
         aluminium_luggages: false,
-        estimated_price: 0   
+        estimated_price: 0,
+        globalScore: 0   
     },
     {
         id: 6,
@@ -107,7 +112,8 @@ export const MOTORCYCLES: Motorcycle[] = [
         has_top_case: true,
         bmw_luggages: true,
         aluminium_luggages: true,
-        estimated_price: 0   
+        estimated_price: 0,
+        globalScore: 0   
     },
     {
         id: 6,
@@ -125,6 +131,26 @@ export const MOTORCYCLES: Motorcycle[] = [
         has_top_case: true,
         bmw_luggages: true,
         aluminium_luggages: true,
-        estimated_price: 0   
+        estimated_price: 0,
+        globalScore: 0   
+    },    
+    {
+        id: 6,
+        link:"https://www.leboncoin.fr/motos/1491644260.htm/",
+        model: 'R 1200 GS lc',
+        is_gsa: false,
+        color: "white",
+        year: 2013,
+        kilometer: 150000,
+        price: 16800,
+        dynamic_pack: false,
+        touring_pack: false,
+        comfort_pack: false,    
+        has_side_cases: false,
+        has_top_case: false,
+        bmw_luggages: false,
+        aluminium_luggages: false,
+        estimated_price: 0,
+        globalScore: 0   
     }    
 ];
